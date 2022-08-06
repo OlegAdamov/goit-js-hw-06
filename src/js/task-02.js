@@ -7,5 +7,19 @@ const ingredients = [
   'Condiments',
 ];
 
-const heading = document.createElement("h1");
-console.log(heading); // <h1></h1>
+const ingredientsUl = document.querySelector('ul');
+
+const createIngredientsEl = ingredient => {
+  
+  const ingredientItem = document.createElement('li');
+  ingredientItem.classList.add('item');
+  ingredients.forEach(function () {
+    ingredientItem.textContent = ingredient;
+  });
+
+
+  return ingredientItem;
+
+}
+const item = ingredients.map(createIngredientsEl);
+ingredientsUl.append(...item)
