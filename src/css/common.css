@@ -24,5 +24,17 @@ button {
 }
 
 .gallery {
-  
-}
+    display: flex;
+    flex-wrap: wrap;
+
+
+     
+        margin: -15px;
+        padding-inline-start: 0;
+    }
+
+.gallery li {
+          margin: 15px;
+          max-width: 300px;
+            height: auto;
+        }
