@@ -23,9 +23,13 @@ const images = [
 
 // Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
 
-const imagesUl = document.querySelector('ul');
+const imagesUl = document.querySelector('.gallery');
 console.log(imagesUl);
 
+const createGalleryLi = images
+  .map((image) => `<li><img src="${image.url}" alt="${image.alt}"/></li>`)
+  .join("");
 
+imagesUl.insertAdjacentHTML("beforeend", createGalleryLi);
 
 
