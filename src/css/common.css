@@ -1,4 +1,4 @@
-* {
+*{
   box-sizing: border-box;
 }
 
@@ -23,18 +23,19 @@ button {
   cursor: pointer;
 }
 
+
+
+/* --- task-03 --- */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-
-
-     
-        margin: -15px;
-        padding-inline-start: 0;
-    }
+    list-style: none;
+    margin: -15px;
+    padding-inline-start: 0;
+}
 
 .gallery li {
-          margin: 15px;
-          max-width: 300px;
-            height: auto;
-        }
+  margin: 15px;
+  height: auto;
+}
+/* --- task-03 --- */
