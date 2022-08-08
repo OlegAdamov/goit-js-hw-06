@@ -10,5 +10,29 @@
 //      которые мы уже добавили в исходные файлы задания.
 
 
-const gh = document.querySelector('#validation-input.valid')
-console.log('gh', gh)
+const onStyleInput = document.querySelector('#validation-input')
+console.log('onStyleInput', onStyleInput)
+// const onStyleInputValid = document.querySelector('#validation-input.valid')
+// console.log('onStyleInputValid', onStyleInputValid)
+// const onStyleInputInvalid = document.querySelector('#validation-input.invalid')
+// console.log('onStyleInputInvalid', onStyleInputInvalid)
+
+// const onPlaceholderInput = document.querySelector('input[data-length="6"]');
+// console.log('onPlaceholderInput', onPlaceholderInput)
+
+onStyleInput.addEventListener('blur', onInputBlur);
+
+function onInputBlur() {
+    // onStyleInput.classList.add(invalid)
+    if (+onStyleInput.value.length === +onStyleInput.dataset.length) {
+        onStyleInput.classList.remove('invalid')
+        onStyleInput.classList.add('valid')
+    } else {
+        onStyleInput.classList.remove('valid')
+        onStyleInput.classList.add('invalid')
+    };
+};
+
+
+
+
