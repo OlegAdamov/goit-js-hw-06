@@ -5,11 +5,12 @@ onStyleInput.addEventListener('blur', onInputBlur);
 
 function onInputBlur() {
     onStyleInput.classList.add('invalid')
-    if (+onStyleInput.value.length === +onStyleInput.dataset.length) {
+    if (Number(onStyleInput.value.length) === Number(onStyleInput.dataset.length)) {
         onStyleInput.classList.toggle('invalid')
         onStyleInput.classList.toggle('valid')
     };
 };
+
 
 
 

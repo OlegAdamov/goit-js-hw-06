@@ -4,5 +4,5 @@ const onSpanId = document.querySelector('#text');
 onInputId.addEventListener('input', spanIdText);
 
 function spanIdText(event) {
-    onSpanId.style.fontSize = `${+event.currentTarget.value}px`;
+    onSpanId.style.fontSize = `${event.currentTarget.value}px`;
 }

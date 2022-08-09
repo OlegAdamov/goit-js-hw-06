@@ -8,11 +8,12 @@ const handleSubmit = (event) => {
         elements: { email, password }
     } = event.currentTarget;
 
-      email.value === "" || password.value === "" ?
-    alert(`Все поля должны быть заполнены`) :
+  if (email.value === "" || password.value === "") {
+    alert(`Все поля должны быть заполнены`)
+  } else {
     console.log(`Email: ${email.value}, Password: ${password.value}`);
+  }
+   return event.currentTarget.reset();}
 
-    event.currentTarget.reset();
-}
 
 form.addEventListener("submit", handleSubmit);
